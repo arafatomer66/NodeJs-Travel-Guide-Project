@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+
+
+    <style>
+
+
+ /**
+ * Header Area
+ **/
+.header-top{
+
+	padding: 1%;
+}
+.menu{
+	margin-left: 150px;
+}
+.menu a{
+	text-decoration: none;
+/*	text-transform: uppercase;*/
+	font-weight: bold;
+	margin-left: 10px;
+}
+.menu a:hover{
+	color: #657f3b;
+}
+
+
+/*Header ends here------------> */
+
+
+.cushome{
+    background: url(images/bestt.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+
+
+
+table, td, th {
+    border: 1px solid black;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 90%;
+    margin-left: 3%;
+}
+
+th {
+    height: 50px;
+    text-align: center;
+}
+
+
+
+    </style>
+
+
+
+</head>
+<body>
+	
+
+
+		<div class="login">
+		<div class="cushome" >
+		<div class="chome">
+			<div class="cus-top text-center">
+				<div class="container">
+					<h2>User's Panel</h2>
+                    
+	<p>Welcome <strong><%= name %></strong></p>
+
+<!--	<a href="/home/create">Create New</a> |-->
+	<a style="color:yellow" href="/logout"><b>Logout</b></a><br/><br/>
+	
+
+				</div>
+			</div>
+			<div class="cus-bottom" style="margin-top: 5%">
+				<div class="container" style="padding-bottom:150px;">
+					<div class="img-row1">
+					<div class="img col-md-3" style="margin: 2%;background-color: #e3e8ef;border: 1px #e3e8ef;border-radius: 5%; opacity:0.9;filter: alpha(opacity=60);text-align: center;margin-left: 5%;padding-top: 2%;padding-bottom: 2%;box-shadow: 5px 10px #989ba0;margin-top: 4%">
+					<a href="/browsebus"><img src="images/bus.png" alt="" style="max-height: 35%;max-width: 35%"></a> 
+					<br>
+					<br>
+                    <label style="margin-left: 2%">Find Transport</label>
+					</div>
+					<div class="img col-md-3" style="margin: 2%;background-color: #e3e8ef;border: 1px #e3e8ef;border-radius: 5%; opacity:0.9;filter: alpha(opacity=60);text-align: center;margin-left: 5%;padding-top: 2%;padding-bottom: 2%;box-shadow: 5px 10px #989ba0;margin-top: 4%"><a href="browsehotel"><img src="images/hotel.png" alt="" style="max-height: 35%;max-width: 35%"></a>
+					<br>
+					<br>
+					<label style="margin-left: 2%">Find Hotel</label>
+					</div>
+					<div class="img col-md-3" style="margin: 2%;background-color: #e3e8ef;border: 1px #e3e8ef;border-radius: 5%; opacity:0.9;filter: alpha(opacity=0);text-align: center;margin-left: 5%;padding-top: 2%;padding-bottom: 2%;box-shadow: 5px 10px #989ba0;margin-top: 4%"><a href="browsehelp"><img src="images/help.png" alt=""  style="max-height: 35%;max-width: 35%"></a>
+					<br>
+                    <br>
+                        <label style="margin-left: 2%">Help</label>
+					</div>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+
+</div>
+
+
+	</div>
+
+
+
+</body>
+</html>

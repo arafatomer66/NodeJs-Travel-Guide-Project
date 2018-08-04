@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    
+    
+    <style>
+    
+    
+ /** 
+ * Header Area 
+ **/
+.header-top{ 
+	
+	padding: 1%;
+}
+.menu{
+	margin-left: 150px;
+}
+.menu a{ 
+	text-decoration: none;
+/*	text-transform: uppercase;*/
+	font-weight: bold;
+	margin-left: 10px;
+}
+.menu a:hover{ 
+	color: #657f3b;
+}
+
+
+
+.brwsmdcn{
+    background: url(images/buss.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;  
+    
+}
+
+
+
+
+table, td, th {
+    border: 1px solid black;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 90%;
+    margin-left: 3%;
+}
+
+th {
+    height: 50px;
+    text-align: center;
+}
+
+  
+    
+    </style>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</head>
+<body class="brwsmdcn">
+	<h2 class="text-center">Delete An User</h2>
+	
+
+	<div class="text-center">
+    <a href="/adminhome">Back to Home</a><br/><br/>
+	<a href="/logout"><b>Logout</b></a><br/><br/>
+	
+    </div>
+    
+    
+    
+<div class="container" id="loginscroll" style="margin-top: 40px;">
+		<div class="row">
+			<div class="col-md-4 col-md-offset-4">
+				<div class="panel panel-info">
+					<div class="panel-heading"><strong>Delete</strong></div>
+					<div class="panel-body">
+						<form method="post">
+							<div class="form-group">
+								<label>USER ID</label>
+								<input name="userid" type="text" class="form-control">
+							</div>
+							<div class="form-group">
+								<button type="submit" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-log-in"></i> Delete</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+            
+		</div>
+	</div>  
+    
+    
+    
+    
+    
+    
+    <h3 class="text-center">User List</h3>
+    
+	<table border="1">
+		<tr>
+			<th>ID</th>
+			<th>USERNAME</th>
+			<th>PASSWORD</th>
+			<th>ADDRESS</th>
+			<th>Phone</th>
+		</tr>
+		<% userList.forEach(function(user){ %>
+			<tr>
+				<td><%= user.userId %></td>
+				<td><%= user.username %></td>
+				<td><%= user.password %></td>
+				<td><%= user.address %></td>
+				<td><%= user.phone %></td>
+			</tr>
+		<% }) %>
+	</table>
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>

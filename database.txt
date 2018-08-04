@@ -1,0 +1,57 @@
+CREATE DATABASE IF NOT EXISTS node DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE node;
+
+CREATE TABLE categories (
+  `id` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `description` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO categories (id, `name`, description) VALUES
+(1, 'Ice Cream', 'N/A'),
+(2, 'Biscuit', 'N/A'),
+(3, 'Chips', 'N/A'),
+(4, 'Drinks', 'N/A');
+
+CREATE TABLE products (
+  `id` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `price` double NOT NULL,
+  `quantity` int(11) NOT NULL,
+  `catId` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE users (
+  `userId` int(11) NOT NULL,
+  `username` varchar(20) NOT NULL,
+  `password` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO users (userId, username, `password`) VALUES
+(1, 'admin', 'admin'),
+(2, 'user', 'user'),
+(3, 'test', 'test'),
+(4, 'test2', 'test2'),
+(6, 'testing', 'testing'),
+(7, 'tested', 'tested'),
+(8, 'xyz', 'xyz');
+
+
+ALTER TABLE categories
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE products
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `catId` (`catId`);
+
+ALTER TABLE users
+  ADD PRIMARY KEY (`userId`),
+  ADD UNIQUE KEY `username` (`username`);
+
+
+ALTER TABLE categories
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+ALTER TABLE products
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE users
+  MODIFY `userId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;

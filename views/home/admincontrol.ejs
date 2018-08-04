@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    
+    
+    <style>
+    
+    
+
+.header-top{ 
+	
+	padding: 1%;
+}
+
+ 
+    
+}
+
+
+
+
+
+
+table, td, th {
+    border: 1px solid black;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 90%;
+    margin-left: 3%;
+}
+
+th {
+    height: 50px;
+    text-align: center;
+}
+
+
+  
+
+    
+    </style>
+    
+   
+    
+</head>
+<body class="brwsmdcn">
+	<h2 class="text-center">Bus Info</h2>
+	
+	<div class="text-center">
+	<a href="/adminhome">Back to Home</a> | 
+	<a href="/logout">Logout</a><br/><br/>
+    </div>
+    
+    <h3 class="text-center">Bus Information</h3>
+	<table border="1">
+		<tr>
+			<th>ID</th>
+			<th>Counter Name</th>
+			<th>Ticket Price</th>
+			<th>Quantity</th>
+			<th>Available Ticket</th>
+			<th>Sold Tickets</th>
+		</tr>
+		<% userList.forEach(function(user){ %>
+			<tr>
+				<td><%= user.id %></td>
+				<td><%= user.name %></td>
+				<td><%= user.price %></td>
+				<td><%= user.quantity %></td>
+				<td><%= user.totalItem %></td>
+				<td><%= user.sold %></td>
+			</tr>
+		<% }) %>
+	</table>
+    
+ 
+    
+</body>
+</html>
